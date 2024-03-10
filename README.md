@@ -9,3 +9,8 @@ ln ~/.dotfiles/lvim/config.lua ~/.config/lvim/config.lua
 ```
 
 Delete if it already exists on destiny.
+
+### Python
+
+Install `pylint`, `black`, and `pyright` via Mason.
+`:Mason`
