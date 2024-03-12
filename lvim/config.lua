@@ -29,7 +29,7 @@ lvim.builtin.treesitter.ensure_installed = {
 
 -- setup linting
 local linters = require "lvim.lsp.null-ls.linters"
-linters.setup { { command = "pylint", filetypes = { "python" } } }
+linters.setup { { command = "flake8", filetypes = { "python" } } }
 
 -- setup debug adapter
 lvim.builtin.dap.active = true
@@ -216,4 +216,9 @@ table.insert(lvim.plugins, {
 lvim.colorscheme = "gruvbox-baby"
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.signcolumn = "number"
+
+vim.cmd([[
+  set autoread
+  au CursorHold * checktime
+]])
+
