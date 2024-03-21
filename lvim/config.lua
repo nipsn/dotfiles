@@ -66,7 +66,7 @@ lvim.builtin.which_key.mappings["dS"] = { "<cmd>lua require('neotest').summary.t
 
 
 -- binding for switching
-lvim.builtin.which_key.mappings["C"] = {
+lvim.builtin.which_key.mappings["V"] = {
   name = "Python",
   c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
 }
@@ -212,6 +212,11 @@ table.insert(lvim.plugins, {
     end,
   },
 })
+
+-- q
+vim.cmd('au BufRead,BufNewFile *.q set filetype=q')
+vim.cmd('au BufRead,BufNewFile *.k set filetype=k')
+vim.cmd('au BufRead,BufNewFile *.sql set filetype=sql')
 
 lvim.colorscheme = "gruvbox-baby"
 vim.opt.number = true

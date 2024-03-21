@@ -14,3 +14,7 @@ Delete if it already exists on destiny.
 
 Install `pylint`, `black`, and `pyright` via Mason.
 `:Mason`
+
+### q
+
+Since directories can't be hard linked, copy paste `indent` and `syntax` into `.config/lvim`
