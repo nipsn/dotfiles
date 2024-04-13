@@ -29,7 +29,7 @@ lvim.builtin.treesitter.ensure_installed = {
 
 -- setup linting
 local linters = require "lvim.lsp.null-ls.linters"
-linters.setup { { command = "flake8", filetypes = { "python" } } }
+linters.setup { { command = "ruff", filetypes = { "python" } } }
 
 -- setup debug adapter
 lvim.builtin.dap.active = true
